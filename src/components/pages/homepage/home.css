@@ -1,0 +1,80 @@
+
+:root {
+  --background: #ffffff;
+  --text-primary: #000;
+  --text-secondary: #6F36EA;
+  --accent: #6F36EA;
+  --border: #333;
+  --form-bg: #fff;
+}
+
+[data-theme='dark'] {
+  --background: #000;
+  --text-primary: #fff;
+  --text-secondary: #6F36EA;
+  --accent: #6F36EA;
+  --border: #808080;
+  --form-bg: #191919;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+a {
+  color: var(--text-secondary);
+}
+
+/* Navbar */
+
+.navbar {
+  position: relative;
+  display: flex;
+  padding: 30px 150px;
+}
+
+.left {
+  flex: 1;
+}
+
+.title {
+  font-size: 22px;
+  color: var(--text-primary);
+  margin-right: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.app {
+  background-color: var(--background);
+  color: var(--text-primary);
+  height: 100vh;
+  font-size: .8rem;
+  transition: all .5s;
+}
+
+.right i {
+  font-size: 1.1rem;
+  cursor: pointer;
+  transform: translateY(0%) translateX(150px);
+  animation: fade-nav-in 1s ease 1 1s forwards;
+}
+
+@keyframes fade-nav-in {
+  to {
+    transform: translateY(0%) translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* Home Page */

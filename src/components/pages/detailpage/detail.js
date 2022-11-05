@@ -39,8 +39,8 @@ function Detail() {
 
 
     <div className="form">
-      <h4 className="header">Playlist Title
-      </h4>
+      <span className='header'>Playlist Title
+      </span>
       <h6 className="sub">
       Description (optional)
       </h6>

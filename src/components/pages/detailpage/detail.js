@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import useLocalStorage from 'use-local-storage'
 
-import './home.css'
+import './detail.css'
 
-function Home() {
+function Detail() {
 
   const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
 
@@ -15,6 +15,8 @@ function Home() {
 
   return (
     <div className="app" data-theme={theme}>
+
+    {/* Navbar */}
 
     <div className='navbar'>
       <div className='left'>
@@ -33,23 +35,73 @@ function Home() {
       
     </div>
 
+{/* Body */}
+
+
     <div className="form">
-      <h4 className="header">
-      Nice work, now let’s add some links to your<span> playlist</span>
+      <h4 className="header">Playlist Title
       </h4>
-      <p className="sub">
-      Don’t fret, you will able to fully customize your playlist later on. We just want to get you setup first.
-      </p>
+      <h6 className="sub">
+      Description (optional)
+      </h6>
+      
+      <textarea rows="5" name='message'/>
 
       <h4>
-        Add Urls
+        Links
       </h4>
-      
-      <textarea rows="5" placeholder='Message' name='message'/>
+
+      <div className='links'>
+
+        <div className='linkitem'>
+        <p>https://tailwindcss.com/docs/installa...</p>
+        </div>
+
+        <div className='linkicon'>
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        
+      </div>
+
+      <div className='links'>
+
+        <div className='linkitem'>
+        <p>https://tailwindcss.com/docs/installa...</p>
+        </div>
+
+        <div className='linkicon'>
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        
+      </div>
+
+      <div className='links'>
+
+        <div className='linkitem'>
+        <p>https://tailwindcss.com/docs/installa...</p>
+        </div>
+
+        <div className='linkicon'>
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        
+      </div>
+
+      <div className='links'>
+
+        <div className='linkitem'>
+        <p>https://tailwindcss.com/docs/installa...</p>
+        </div>
+
+        <div className='linkicon'>
+        <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        
+      </div>
 
       <div className="btn">
-        <Link to='/detail'>
-      <button> Get my playlist</button>
+        <Link to='/Finish'>
+      <button>All done</button>
       </Link>
       </div>
 
@@ -58,4 +110,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Detail;

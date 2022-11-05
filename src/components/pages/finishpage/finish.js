@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import useLocalStorage from 'use-local-storage'
 
-import './home.css'
+import './finish.css'
 
-function Home() {
+function Finsh() {
 
   const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
 
@@ -15,6 +15,8 @@ function Home() {
 
   return (
     <div className="app" data-theme={theme}>
+
+    {/* Navbar */}
 
     <div className='navbar'>
       <div className='left'>
@@ -33,24 +35,75 @@ function Home() {
       
     </div>
 
-    <div className="form">
-      <h4 className="header">
-      Nice work, now let’s add some links to your<span> playlist</span>
-      </h4>
-      <p className="sub">
-      Don’t fret, you will able to fully customize your playlist later on. We just want to get you setup first.
-      </p>
+{/* Body */}
 
-      <h4>
-        Add Urls
+
+    <div className="form">
+      <h4 className="header">Playlist Title
       </h4>
+      <h6 className="sub">
+      Description:
+      </h6>
       
-      <textarea rows="5" placeholder='Message' name='message'/>
+      <p className='desc'>whatever description was added about specific url filler playlistsi am sure it does not include punctuation</p>
+
+      <div className='subheader'>
+        <div className='subtitle'>
+          <h4>Links</h4>
+        </div>
 
       <div className="btn">
-        <Link to='/detail'>
-      <button> Get my playlist</button>
-      </Link>
+      <button>Open All</button>
+      </div>
+
+      </div>
+
+      <div className='links'>
+
+        <div className='linkitem'>
+        <p>https://tailwindcss.com/docs/installa...</p>
+        </div>
+
+        <div className='linkicon'>
+          <i class="fa fa-check-square" aria-hidden="true"></i>
+        </div>
+        
+      </div>
+
+      <div className='links'>
+
+        <div className='linkitem'>
+        <p>https://tailwindcss.com/docs/installa...</p>
+        </div>
+
+        <div className='linkicon'>
+          <i class="fa fa-check-square" aria-hidden="true"></i>
+        </div>
+        
+      </div>
+
+      <div className='links'>
+
+        <div className='linkitem'>
+        <p>https://tailwindcss.com/docs/installa...</p>
+        </div>
+
+        <div className='linkicon'>
+          <i class="fa fa-check-square" aria-hidden="true"></i>
+        </div>
+        
+      </div>
+
+      <div className='links'>
+
+        <div className='linkitem'>
+        <p>https://tailwindcss.com/docs/installa...</p>
+        </div>
+
+        <div className='linkicon'>
+          <i class="fa fa-check-square" aria-hidden="true"></i>
+        </div>
+        
       </div>
 
       </div>
@@ -58,4 +111,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Finsh ;
